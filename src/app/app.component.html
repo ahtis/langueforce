@@ -1,0 +1,159 @@
+<nav class="navbar navbar-fixed-top" track-scroll [menuItemClickEvent]="itemClickEvent">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<div class="menu-toggle" (click)="collapsed = !collapsed">
+				<i class="menu"></i>
+			</div>
+			<a class="navbar-brand" *ngIf="brand" href="#{{brand.href}}" (click)="onSelect(brand)">{{brand.name}}</a>
+		</div>
+		<div class="collapse navbar-collapse" [class.toggle]="collapsed">
+			<ul class="nav navbar-nav navbar-right">
+			 	<li *ngFor="let menuItem of menuItems">
+			 		<a href="#{{menuItem.href}}" [class.active]="menuItem === selectedMenuItem" (click)="onSelect(menuItem)" (click)="registerClickEvent($event)">{{menuItem.name}}</a>
+			 	</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<header id="home">
+	<div class="header-content">
+		<div class="header-content-inner">
+			<h1>Osutame professionaalseid tõlketeenuseid</h1>
+			<hr>
+			<p>Pikaajaline kogemus lihtsamate ja keerukamate tekstide tõlkimisel, kööstöö edukate tõlkebüroodega, TLÜ kirjaliku tõlke magister</p>
+		</div>
+	</div>
+</header>
+
+<section id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 text-center">
+				<h2 class="section-heading"><span class="primary-color">Kes</span> oleme</h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-third text-center">
+				<div class="service-box">
+					<i class="business"></i>
+					<p>
+						Langueforce OÜ on asutatud 2016. aastal. Kuigi ettevõte on uus, on selle taga pikaajalised kogemused mitmesuguste tekstide tõlkimisel ning koostöö edukate tegutsevate tõlkebüroodega.
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-third text-center">
+				<div class="service-box">
+					<i class="bulb"></i>
+					<p>Ettevõtte loomise ajendiks oli soov alustada teenuste pakkumist otse lõppkliendile, vastutades ise oma tõlgete väljastamise ja kvaliteedi eest.</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-third text-center">
+				<div class="service-box">
+					<i class="school"></i>
+					<p>Lisaks varasemale kogemusele on kvaliteetse tõlketeenuse pakkumiseks vajalikud pädevused omandatud Tallinna Ülikooli kirjaliku tõlke magistriõppes.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="services">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 text-center">
+				<h2 class="section-heading"><span class="primary-color">Mida</span> pakume</h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-third text-center">
+				<div class="service-box">
+					<h3>Tõlkimine</h3>
+					<p>Keelesuunad: inglise-eesti, eesti-inglise, vene-eesti, soome-eesti</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-third text-center">
+				<div class="service-box">
+					<h3>Korrektuur</h3>
+				</div>
+			</div>
+			<div class="col-lg-3 col-third text-center">
+				<div class="service-box">
+					<h3>Toimetamine</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="prices">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 text-center">
+				<h2 class="section-heading"><span class="primary-color">Kuidas</span> kujuneb hind</h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-third text-center">
+				<div class="service-box">
+					<h3>Tõlkimine</h3>
+					<p>alates ... eurot/lk</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-third text-center">
+				<div class="service-box">
+					<h3>Korrektuur</h3>
+					<p>alates ... eurot/lk</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-third text-center">
+				<div class="service-box">
+					<h3>Toimetamine</h3>
+					<p>alates ... eurot/lk</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 text-center">
+				<hr>
+				<h3><span class="primary-color">Standardlehekülg</span> sisaldab 1800 tähemärki koos tühikutega</h3>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="contacts">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 text-center">
+				<h2 class="section-heading"><span class="primary-color">Võta</span> ühendust</h2>
+				<hr>
+			</div>
+
+			<div class="col-lg-8 text-center">
+				<p>Registrikood 14130172</p>
+			</div>
+
+			<div class="col-lg-8 text-center">
+				<i class="phone"></i>
+				<p>+372 5815 1118</p>
+			</div>
+
+			<div class="col-lg-8 text-center">
+				<i class="email"></i>
+				<p>info@langueforce.eu</p>
+			</div>
+		</div>
+	</div>
+</section>

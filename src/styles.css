@@ -1,0 +1,64 @@
+body, html {
+	height: 100%;
+	width: 100%;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+	user-select: none;
+}
+
+body {
+	margin: 0;
+}
+
+body {
+	font-family: 'Merriweather','Helvetica Neue', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+}
+
+ol, ul {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h1, h2, h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.1;
+	color: inherit;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0 0 20px 0;
+}
+
+section {
+	padding: 100px 0;
+}
+
+a {
+    transition: all .35s;
+    color: #F44336;
+}
