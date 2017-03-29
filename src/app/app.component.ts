@@ -1,14 +1,14 @@
-import { Component, Directive, OnInit } from '@angular/core';
+import { Component, Directive, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { MenuItem } from './menu-item';
 import { MenuItemService } from './menu-item.service';
 
 @Component({
-	moduleId: module.id,
   selector: 'lf-app',
   providers: [MenuItemService],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss'],
+	encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit { 
 	brand: MenuItem;

@@ -1,5 +1,6 @@
 node_modules/**/*
 src/app/**/*.js*
 src/main.js*
+dist/**/*
 
 npm-debug.*
