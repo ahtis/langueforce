@@ -1,5 +1,7 @@
 @import "_default";
 
+$menu-item-hover-color: primary-color-alpha(.8);
+
 .navbar {
     position: relative;
     margin-bottom: 20px;
@@ -319,12 +321,20 @@ section {
         margin-right: -15px;
     }
 
-    .navbar-brand, .nav>li>a {
-        color: primary-color-alpha(.8);
+    .navbar-brand {
+        &:hover {
+            color: $menu-item-hover-color;
+            transition: color .25s;
+        }
     }
 
-    .navbar-brand:focus, .nav>li>a:focus {
-        color: rgba(255, 255, 255, .7);
+    .nav {
+        li a {
+            &:hover {
+                color: $menu-item-hover-color;
+                transition: color .25s;
+            }
+        }
     }
 
     .container {

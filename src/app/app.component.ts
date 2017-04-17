@@ -26,6 +26,11 @@ export class AppComponent implements OnInit {
 
 	registerClickEvent(event: Event): void {
 		this.itemClickEvent = event;
+		//console.log(this.itemClickEvent);
+		//console.log(this.itemClickEvent.srcElement.attributes.getNamedItem('href').value)
+		//let eID = this.itemClickEvent.srcElement.attributes.getNamedItem('href').value.replace('#', '');
+		//let section = document.querySelectorAll('section[id="' + eID + '"]')[0];
+		//console.log(section.attributes);
 	}
 
 	onSelect(menuItem: MenuItem): void {
