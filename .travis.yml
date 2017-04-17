@@ -16,7 +16,7 @@ install:
 before_install:
     - export DISPLAY=:99.0
     - sh -e /etc/init.d/xvfb start
-    - "npm install -g npm@^7"
+    - "npm install -g npm@^4"
     - sleep 3
 script:
   - npm run ci:travis
