@@ -4,13 +4,13 @@ import { MenuItem } from './menu-item';
 import { MenuItemService } from './menu-item.service';
 
 @Component({
-  selector: 'lf-app',
-  providers: [MenuItemService],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+	selector: 'lf-app',
+	providers: [MenuItemService],
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss'],
 	encapsulation: ViewEncapsulation.None
 })
-export class AppComponent implements OnInit { 
+export class AppComponent implements OnInit {
 	brand: MenuItem;
 	menuItems: MenuItem[];
 	selectedMenuItem: MenuItem;
@@ -26,17 +26,14 @@ export class AppComponent implements OnInit {
 
 	registerClickEvent(event: Event): void {
 		this.itemClickEvent = event;
-		//console.log(this.itemClickEvent);
-		//console.log(this.itemClickEvent.srcElement.attributes.getNamedItem('href').value)
-		//let eID = this.itemClickEvent.srcElement.attributes.getNamedItem('href').value.replace('#', '');
-		//let section = document.querySelectorAll('section[id="' + eID + '"]')[0];
-		//console.log(section.attributes);
 	}
 
 	onSelect(menuItem: MenuItem): void {
-		if (this.collapsed === false) this.collapsed = true;
-		this.selectedMenuItem = menuItem;
+		if (this.collapsed === false) {
+			this.collapsed = true;
+		}
 
+		this.selectedMenuItem = menuItem;
 		this.highlightActiveMenuItem(this.selectedMenuItem.href);
 	}
 

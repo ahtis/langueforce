@@ -7,14 +7,14 @@ import { Directive, HostListener, ElementRef, Input } from '@angular/core'
 export class TrackScrollDirective {
 	@Input('menuItemClickEvent') clickEvent: Event;
 
-	eventOccurranceDelta: number= 100;
+	eventOccurranceDelta: number = 100;
 
 	constructor(private el: ElementRef) {}
 
 	@HostListener('scroll', ['$event']) track(event: Event) {
 		let delta = this.clickEvent && Math.abs(this.clickEvent.timeStamp - event.timeStamp);
 
-		if(!this.clickEvent || delta > this.eventOccurranceDelta) {
+		if (!this.clickEvent || delta > this.eventOccurranceDelta) {
 			this.onScrollEvent();
 		}
 
@@ -24,10 +24,9 @@ export class TrackScrollDirective {
 	private onScrollEvent(): void {
 		let sections = [].slice.call(document.getElementsByTagName('section'));
 		this.removeActiveClassOnScroll(sections);
-		
 	}
 
-	private changeMenuBackgroundOnScroll(pageYOffset: number) : void {
+	private changeMenuBackgroundOnScroll(pageYOffset: number): void {
 		let _classes = this.el.nativeElement.classList;
 
 		if (pageYOffset >= 50 && !_classes.contains('navbar-scrolled')) {

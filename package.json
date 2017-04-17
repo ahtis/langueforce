@@ -9,8 +9,11 @@
     "build:dist": "npm run clean:dist && webpack --env=prod --progress --profile --bail --colors",
     "server:dev": "webpack-dev-server --env=dev --open --progress --profile --watch --content-base src/",
     "server:prod": "http-server dist -c-1 --cors",
+    "ci:travis": "npm run lint && npm run build:dist",
+    "lint": "npm run tslint \"src/**/*.ts\"",
     "server": "npm run server:dev",
-    "start": "npm run server"
+    "start": "npm run server",
+    "tslint": "tslint"
   },
   "license": "MIT",
   "dependencies": {
@@ -51,6 +54,7 @@
     "style-loader": "^0.13.1",
     "to-string-loader": "^1.1.5",
     "tslib": "^1.6.0",
+    "tslint": "^5.1.0",
     "typescript": "^2.2.1",
     "uglify-js": "^2.8.16",
     "webpack": "^2.3.2",
